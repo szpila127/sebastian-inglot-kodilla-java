@@ -1,6 +1,9 @@
 package com.kodilla.testing.collection;
 
-import org.junit.*;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
@@ -21,27 +24,35 @@ public class CollectionTestSuite {
         //Given
         ArrayList<Integer> testList = new ArrayList<>();
         //When
-        ArrayList<Integer> testList2;
-        testList2 = testList;
+        ArrayList<Integer> testList2 = new ArrayList<>(testList);
         OddNumbersExterminator.exterminate(testList2);
-        System.out.println(testList2);
+        System.out.println("Testing :" + testList);
         //Then
-        Assert.assertEquals(testList,testList2);
+        Assert.assertEquals(testList, testList2);
     }
 
     @Test
     public void testOddNumbersExterminatorNormalList() {
+
         //Given
         ArrayList<Integer> testList = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
-            testList.add(i);
-        }
+        testList.add(1);
+        testList.add(7);
+        testList.add(10);
+        testList.add(5);
+        testList.add(8);
+        testList.add(6);
+
         //When
-        ArrayList<Integer> testList2;
-        testList2 = testList;
-        OddNumbersExterminator.exterminate(testList2);
-        System.out.println(testList2);
+        System.out.println("Testing method: OddNumberExterminator");
+        ArrayList<Integer> testList2 = new ArrayList<>();
+        testList2.add(10);
+        testList2.add(8);
+        testList2.add(6);
+
+        ArrayList<Integer> testList3 = OddNumbersExterminator.exterminate(testList);
+
         //Then
-        Assert.assertEquals(testList,testList2);
+        Assert.assertEquals(testList2, testList3);
     }
 }
