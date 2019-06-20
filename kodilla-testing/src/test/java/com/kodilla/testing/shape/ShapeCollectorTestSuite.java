@@ -45,8 +45,9 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(square2);
         //When
         shapeCollector.removeFigure(square);
+        shapeCollector.removeFigure(square2);
         //Then
-        Assert.assertEquals(1, shapeCollector.getFiguresQuantity());
+        Assert.assertEquals(0, shapeCollector.getFiguresQuantity());
     }
 
     @Test
