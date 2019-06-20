@@ -39,12 +39,14 @@ public class ShapeCollectorTestSuite {
     public void testRemoveFigure() {
         //Given
         Square square = new Square(4);
+        Square square2 = new Square(5);
         ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(square);
+        shapeCollector.addFigure(square2);
         //When
         shapeCollector.removeFigure(square);
         //Then
-        Assert.assertEquals(0, shapeCollector.getFiguresQuantity());
+        Assert.assertEquals(1, shapeCollector.getFiguresQuantity());
     }
 
     @Test
