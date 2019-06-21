@@ -23,16 +23,16 @@ public class AdvStatistics {
         commentsQuantitny = statistics.commentsCount();
 
         if (statistics.usersNames().size() == 0) {
-            avPostsPerUser = 0;
-        } else avPostsPerUser = (statistics.postsCount() / statistics.usersNames().size());
+            avPostsPerUser = 0.0;
+        } else avPostsPerUser = (double) statistics.postsCount() / (double) statistics.usersNames().size();
 
         if (statistics.usersNames().size() == 0) {
-            avCommentsPerUser = 0;
-        } else avCommentsPerUser = (statistics.commentsCount() / statistics.usersNames().size());
+            avCommentsPerUser = 0.0;
+        } else avCommentsPerUser = (double) statistics.commentsCount() / (double) statistics.usersNames().size();
 
         if (statistics.postsCount() == 0) {
-            avCommentsPerPost = 0;
-        } else avCommentsPerPost = (statistics.commentsCount() / statistics.postsCount());
+            avCommentsPerPost = 0.0;
+        } else avCommentsPerPost = (double) statistics.commentsCount() / (double) statistics.postsCount();
     }
 
     public String showStatistics() {

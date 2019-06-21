@@ -35,8 +35,8 @@ public class AdvStatisticsTestSuite {
         List<String> staticticsList = new LinkedList<>();
         staticticsList.add("Sebastian");
         staticticsList.add("Michał");
-        int postsCount = 200;
-        int commentsCount = 1000;
+        int postsCount = 2;
+        int commentsCount = 1;
 
         when(statisticsMock.postsCount()).thenReturn(postsCount);
         when(statisticsMock.commentsCount()).thenReturn(commentsCount);
@@ -46,9 +46,9 @@ public class AdvStatisticsTestSuite {
         //When
         advStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        Assert.assertEquals(100, advStatistics.getAvPostsPerUser(), 0.01);
-//        Assert.assertEquals(50, advStatistics.getAvCommentsPerPost(), 0.01);
-//        Assert.assertEquals(500, advStatistics.getAvCommentsPerUser(), 0.01);
+//        Assert.assertEquals(100, advStatistics.getAvPostsPerUser(), 0.01);
+        Assert.assertEquals(0.5, advStatistics.getAvCommentsPerPost(), 0.01);
+//        Assert.assertEquals(0, advStatistics.getAvCommentsPerUser(), 0.01);
 //        Assert.assertEquals(500, advStatistics.getCommentsQuantitny());
 //        Assert.assertEquals(20, advStatistics.getPostsQuantity());
 //        Assert.assertEquals(2, advStatistics.getUsersQuantity());
