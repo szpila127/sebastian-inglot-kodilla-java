@@ -34,7 +34,7 @@ public class WorldTestSuite {
         BigDecimal actualPopulation = world.getPeopleQuantity();
 
         //Then
-        BigDecimal expectedPopulation = new BigDecimal("10650562272350078868");
+        BigDecimal expectedPopulation = new BigDecimal("232116622");
         Assert.assertEquals(expectedPopulation, actualPopulation);
     }
 }
