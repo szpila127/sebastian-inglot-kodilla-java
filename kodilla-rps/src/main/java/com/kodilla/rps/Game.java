@@ -2,7 +2,7 @@ package com.kodilla.rps;
 
 import java.util.Scanner;
 
-public class Game {
+class Game {
     private int round;
 
     Game(int round) {
@@ -27,10 +27,16 @@ public class Game {
         return scan.nextInt();
     }
 
-    public static char charKeyboard() {
-        Scanner sc = new Scanner(System.in);
-        char c = sc.next().charAt(0);
-        return c;
+    static char charKeyboard() {
+        while (true) {
+            Scanner sc = new Scanner(System.in);
+            char xn = sc.next().charAt(0);
+            if (xn == 'n') {
+                return xn;
+            } else if (xn == 'x') {
+                return xn;
+            }
+        }
     }
 
     int getRound() {
