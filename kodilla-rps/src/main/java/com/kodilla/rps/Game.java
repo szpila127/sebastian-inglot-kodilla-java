@@ -5,17 +5,27 @@ import java.util.Scanner;
 public class Game {
     private int round;
 
-    public Game(int round) {
+    Game(int round) {
         this.round = round;
     }
 
-    public static int intKeyboard() {
-        Scanner scan = new Scanner(System.in);
-        int round = scan.nextInt();
-        return round;
+    static int intKeyboardTo3() {
+        int counter = 0;
+        while (counter < 1000) {
+            Scanner scan = new Scanner(System.in);
+            int intKey = scan.nextInt();
+            if (intKey <= 3 && intKey != 0) {
+                return intKey;
+            }
+        }
+        counter++;
+        return counter;
     }
 
-
+    static int intKeyboard() {
+        Scanner scan = new Scanner(System.in);
+        return scan.nextInt();
+    }
 
     public static char charKeyboard() {
         Scanner sc = new Scanner(System.in);
@@ -23,8 +33,7 @@ public class Game {
         return c;
     }
 
-
-    public int getRound() {
+    int getRound() {
         return round;
     }
 }

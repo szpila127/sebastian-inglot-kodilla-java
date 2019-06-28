@@ -6,7 +6,8 @@ public class RpsRunner {
     public static void main(String[] args) {
         System.out.println("Witamy w Rock-Paper-Scissors!");
         Player player1 = new Player(Player.stringKeyboard(), 0);
-        Player computer = new Player(("Komputer"), 0);
+        player1.setName(player1.getName().toUpperCase());
+        Player computer = new Player(("KOMPUTER"), 0);
 
         System.out.println("Witaj " + player1.getName());
         System.out.println("Podaj ilość rund i potwierdź ENTER");
@@ -21,44 +22,96 @@ public class RpsRunner {
 
         int counter = 1;
 
-        do {
-            System.out.println("Runda: " + counter);
-            System.out.println("Wybierz zagranie: 1-(Kamień), 2-(Papier), 3-(Nożyce)");
-            if (Player.rps(Game.intKeyboard(), randomNumberTo3()) == 1) {
-                System.out.println("Rundę " + counter + " wygrywa " + player1.getName());
-                player1.setCount(player1.getCount() + 1);
-            } else if (Player.rps(Game.intKeyboard(), randomNumberTo3()) == 2) {
-                System.out.println("Rundę " + counter + " wygrywa " + computer.getName());
-                computer.setCount(computer.getCount() + 1);
-            } else System.out.println("Runda " + counter + ": Remis");
-            counter++;
-            System.out.println(player1.getName() + ": " + player1.getCount());
-            System.out.println(computer.getName() + ": " + computer.getCount());
-            System.out.println();
-            if (computer.getCount() == game.getRound()) {
-                System.out.println("Zwycięstwo dla: " + computer.getName());
-                System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
-                        "Wybierz (x) jeśli chcesz wyjść z gry");
-                return;
-            }
-            if (player1.getCount() == game.getRound()) {
-                System.out.println("Zwycięstwo dla: " + player1.getName());
-                System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
-                        "Wybierz (x) jeśli chcesz wyjść z gry");
-                return;
-            }
-        } while ((computer.getCount() != game.getRound()) || (player1.getCount() != game.getRound()));
-    }
+//        do {
+//            System.out.println("Runda: " + counter);
+//            System.out.println("Wybierz zagranie: 1-(Kamień), 2-(Papier), 3-(Nożyce)");
+//            if (Player.rps(Game.intKeyboardTo3(), randomNumberTo3()) == 1) {
+//                System.out.println("Rundę " + counter + " wygrywa " + player1.getName());
+//                player1.setCount(player1.getCount() + 1);
+//            } else if (Player.rps(Game.intKeyboard(), randomNumberTo3()) == 2) {
+//                System.out.println("Rundę " + counter + " wygrywa " + computer.getName());
+//                computer.setCount(computer.getCount() + 1);
+//            } else System.out.println("Runda " + counter + ": Remis");
+//            counter++;
+//            System.out.println("Gra do " + game.getRound() + " wygranych rund.");
+//            System.out.println(player1.getName() + ": " + player1.getCount());
+//            System.out.println(computer.getName() + ": " + computer.getCount());
+//            System.out.println();
+//            if (computer.getCount() == game.getRound()) {
+//                System.out.println("Zwycięstwo dla: " + computer.getName());
+//                System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
+//                        "Wybierz (x) jeśli chcesz wyjść z gry");
+//                return;
+//            }
+//            if (player1.getCount() == game.getRound()) {
+//                System.out.println("Zwycięstwo dla: " + player1.getName());
+//                System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
+//                        "Wybierz (x) jeśli chcesz wyjść z gry");
+//                return;
+//            }
+//        } while ((computer.getCount() != game.getRound()) || (player1.getCount() != game.getRound()));
+//    }
 
-    private static int randomNumberTo3 () {
-        Random theGenerator = new Random();
-        int random = theGenerator.nextInt(3);
-        if (random == 0) {
-            return 1;
-        } else if (random == 1) {
-            return 2;
-        } else {
-            return 3;
+    do {
+        System.out.println("Runda: " + counter);
+        System.out.println("Wybierz zagranie: 1-(Kamień), 2-(Papier), 3-(Nożyce)");
+        int gameRPS = Player.rps(Game.intKeyboardTo3(), randomNumberTo3());
+        if (gameRPS == 33) {
+            System.out.println(player1.getName() + " - Nożyce vs. Nożyce - " + computer.getName());
+            System.out.println("Runda " + counter + ": Remis");
+        } else if (gameRPS == 32) {
+            System.out.println(player1.getName() + " - Nożyce vs. Papier - " + computer.getName());
+            System.out.println("Rundę " + counter + " wygrywa " + player1.getName());
+            player1.setCount(player1.getCount() + 1);
+        } else if (gameRPS == 31) {
+            System.out.println(player1.getName() + " - Nożyce vs. Kamień - " + computer.getName());
+            System.out.println("Rundę " + counter + " wygrywa " + computer.getName());
+            computer.setCount(computer.getCount() + 1);
+        } else if (gameRPS == 22) {
+            System.out.println(player1.getName() + " - Papier vs. Papier - " + computer.getName());
+            System.out.println("Runda " + counter + ": Remis");
+        } else if (gameRPS == 21) {
+            System.out.println(player1.getName() + " - Papier vs. Kamień - " + computer.getName());
+            System.out.println("Rundę " + counter + " wygrywa " + player1.getName());
+            player1.setCount(player1.getCount() + 1);
+        } else if (gameRPS == 23) {
+            System.out.println(player1.getName() + " - Papier vs. Nożyce - " + computer.getName());
+            System.out.println("Rundę " + counter + " wygrywa " + computer.getName());
+            player1.setCount(computer.getCount() + 1);
+        } else if (gameRPS == 11) {
+            System.out.println(player1.getName() + " - Kamień vs. Kamień - " + computer.getName());
+            System.out.println("Runda " + counter + ": Remis");
+        } else if (gameRPS == 13) {
+            System.out.println(player1.getName() + " - Kamień vs. Nożyce - " + computer.getName());
+            System.out.println("Rundę " + counter + " wygrywa " + player1.getName());
+            player1.setCount(player1.getCount() + 1);
+        } else
+            System.out.println(player1.getName() + " - Kamień vs. Papier - " + computer.getName());
+            System.out.println("Rundę " + counter + " wygrywa " + computer.getName());
+            player1.setCount(computer.getCount() + 1);
+
+        counter++;
+        System.out.println("Gra do " + game.getRound() + " wygranych rund.");
+        System.out.println(player1.getName() + ": " + player1.getCount());
+        System.out.println(computer.getName() + ": " + computer.getCount());
+        System.out.println();
+        if (computer.getCount() == game.getRound()) {
+            System.out.println("Zwycięstwo dla: " + computer.getName());
+            System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
+                    "Wybierz (x) jeśli chcesz wyjść z gry");
+            return;
         }
+        if (player1.getCount() == game.getRound()) {
+            System.out.println("Zwycięstwo dla: " + player1.getName());
+            System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
+                    "Wybierz (x) jeśli chcesz wyjść z gry");
+            return;
+        }
+    } while ((computer.getCount() != game.getRound()) || (player1.getCount() != game.getRound()));
+}
+
+    private static int randomNumberTo3() {
+        Random theGenerator = new Random();
+        return theGenerator.nextInt(3) + 1;
     }
 }

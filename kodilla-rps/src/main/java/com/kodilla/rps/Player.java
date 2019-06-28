@@ -7,56 +7,59 @@ public class Player {
     private String name;
     private int count;
 
-    public static String stringKeyboard() {
+    static String stringKeyboard() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Podaj imię i potwierdź ENTER");
-        String firstName = scan.nextLine();
-        return firstName;
+        return scan.nextLine();
     }
 
-    public static int rps(int player , int comp) {
+    static int rps(int player, int comp) {
         if (player == 3) {
             if (comp == 3) {
-                return 0;
+                return 33;
             } else if (comp == 2) {
-                return 1;
+                return 32;
             } else {
-                return 2;
+                return 31;
             }
         } else if (player == 2) {
             if (comp == 2) {
-                return 0;
+                return 22;
             } else if (comp == 1) {
-                return 1;
+                return 21;
             } else {
-                return 2;
+                return 23;
             }
         } else {
             if (comp == 1) {
-                return 0;
+                return 11;
             } else if (comp == 3) {
-                return 1;
+                return 13;
             } else {
-                return 2;
+                return 12;
             }
         }
     }
 
-    public Player(String name, int count) {
+    Player(String name, int count) {
         this.name = name;
         this.count = count;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getCount() {
+    int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    void setCount(int count) {
         this.count = count;
+    }
+
+    void setName(String name) {
+        this.name = name;
     }
 
     @Override
