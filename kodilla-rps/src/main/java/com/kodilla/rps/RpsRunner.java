@@ -68,21 +68,17 @@ public class RpsRunner {
                 System.out.println(player1.getName() + ": " + player1.getCount());
                 System.out.println(computer.getName() + ": " + computer.getCount());
                 System.out.println();
+
                 if (computer.getCount() == game.getRound()) {
-                    System.out.println("Zwycięstwo dla: " + computer.getName());
-                    System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
-                            "Wybierz (x) jeśli chcesz wyjść z gry");
+                    returnWinner(computer);
                     char set = Game.charKeyboard();
                     if (set == 'n') {
                         player1.setCount(0);
                         computer.setCount(0);
                         break;
                     } else if (set == 'x') return;
-                }
-                if (player1.getCount() == game.getRound()) {
-                    System.out.println("Zwycięstwo dla: " + player1.getName());
-                    System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
-                            "Wybierz (x) jeśli chcesz wyjść z gry");
+                } else if (player1.getCount() == game.getRound()) {
+                    returnWinner(player1);
                     char set = Game.charKeyboard();
                     if (set == 'n') {
                         player1.setCount(0);
@@ -97,5 +93,11 @@ public class RpsRunner {
     private static int randomNumberTo3() {
         Random theGenerator = new Random();
         return theGenerator.nextInt(3) + 1;
+    }
+
+    private static void returnWinner(Player player) {
+        System.out.println("Zwycięstwo dla: " + player.getName());
+        System.out.println("Wybierz (n) jeśli chcesz zagrać jeszcze raz.\n" +
+                "Wybierz (x) jeśli chcesz wyjść z gry");
     }
 }
