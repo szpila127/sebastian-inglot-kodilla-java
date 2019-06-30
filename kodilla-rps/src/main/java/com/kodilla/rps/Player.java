@@ -14,9 +14,37 @@ public class Player {
     }
 
     static int rps(int player, int comp) {
-        if (player == 3) {
+        if (player == 5) {
+            if (comp == 5) {
+                return 55;
+            } else if (comp == 4) {
+                return 54;
+            } else if (comp == 3) {
+                return 53;
+            } else if (comp == 2) {
+                return 52;
+            } else {
+                return 51;
+            }
+        } else if (player == 4) {
+            if (comp == 4) {
+                return 44;
+            } else if (comp == 5) {
+                return 45;
+            } else if (comp == 3) {
+                return 43;
+            } else if (comp == 2) {
+                return 42;
+            } else {
+                return 41;
+            }
+        } else if (player == 3) {
             if (comp == 3) {
                 return 33;
+            } else if (comp == 5) {
+                return 35;
+            } else if (comp == 4) {
+                return 34;
             } else if (comp == 2) {
                 return 32;
             } else {
@@ -25,14 +53,22 @@ public class Player {
         } else if (player == 2) {
             if (comp == 2) {
                 return 22;
-            } else if (comp == 1) {
-                return 21;
-            } else {
+            } else if (comp == 5) {
+                return 25;
+            } else if (comp == 4) {
+                return 24;
+            } else if (comp == 3) {
                 return 23;
+            } else {
+                return 21;
             }
         } else {
             if (comp == 1) {
                 return 11;
+            } else if (comp == 5) {
+                return 15;
+            } else if (comp == 4) {
+                return 14;
             } else if (comp == 3) {
                 return 13;
             } else {

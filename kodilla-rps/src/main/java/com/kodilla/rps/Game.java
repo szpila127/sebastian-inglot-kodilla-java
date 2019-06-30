@@ -9,11 +9,11 @@ class Game {
         this.round = round;
     }
 
-    static int intKeyboardTo3() {
+    static int intKeyboardTo5() {
         while (true) {
             Scanner scan = new Scanner(System.in);
             int intKey = scan.nextInt();
-            if (intKey <= 3 && intKey != 0) {
+            if (intKey <= 5 && intKey != 0) {
                 return intKey;
             }
         }
