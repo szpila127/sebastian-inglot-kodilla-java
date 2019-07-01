@@ -9,15 +9,12 @@ public class FirstChallenge {
                 throw new ArithmeticException();
             }
 
-        } catch (ArithmeticException args) {
+        } catch (ArithmeticException e) {
 
-            System.out.println("Error " + args);
-
-        } finally {
-
-            return a / b;
+            System.err.println("Nie możesz dzielić przez 0");
 
         }
+        return a / b;
     }
 
     /**
