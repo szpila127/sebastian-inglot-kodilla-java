@@ -13,8 +13,10 @@ public class FirstChallenge {
 
             System.err.println("Nie możesz dzielić przez 0");
 
+        } finally {
+
+            return a / b;
         }
-        return a / b;
     }
 
     /**
