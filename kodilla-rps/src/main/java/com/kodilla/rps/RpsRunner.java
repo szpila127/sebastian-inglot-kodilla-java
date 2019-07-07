@@ -1,9 +1,7 @@
 package com.kodilla.rps;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 public class RpsRunner {
     public static void main(String[] args) {
@@ -41,16 +39,18 @@ public class RpsRunner {
                 int move = Game.intKeyboardTo5();
                 Symbol playerMove = Symbol.getSymbol(move);
                 PlayerScore score = findWinner();
+                Random random = new Random();
+                int randomScore = random.nextInt(2);
                 if (score == PlayerScore.WIN) {
-                    Set<Symbol> losing = Symbol.getLosingSymbols(playerMove);
-                    System.out.println(player1.getName() + " [" + playerMove + "] vs. ["
-                            + "] " + computer.getName());
+                    List<Symbol> losing = Symbol.getLosingSymbols(playerMove);
+                    System.out.println(player1.getName() + " [" + playerMove + "] vs. [" + losing.get(randomScore) +
+                            "] " + computer.getName());
                     System.out.println("Round " + counter + " for " + player1.getName());
                     player1.setCount(player1.getCount() + 1);
                 } else if (score == PlayerScore.LOOSE) {
-                    Set<Symbol> winning = Symbol.getWinningSymbols(playerMove);
-                    System.out.println(player1.getName() + " [" + playerMove + "] vs. ["
-                            + "] " + computer.getName());
+                    List<Symbol> winning = Symbol.getWinningSymbols(playerMove);
+                    System.out.println(player1.getName() + " [" + playerMove + "] vs. [" + winning.get(randomScore) +
+                            "] " + computer.getName());
                     System.out.println("Round " + counter + " for " + computer.getName());
                     computer.setCount(computer.getCount() + 1);
                 } else {

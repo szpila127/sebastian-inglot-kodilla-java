@@ -1,6 +1,8 @@
 package com.kodilla.rps;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public enum Symbol {
@@ -23,8 +25,8 @@ public enum Symbol {
         } else return Symbol.LIZARD;
     }
 
-    public static Set<Symbol> getWinningSymbols(Symbol symbol) {
-        Set<Symbol> winning = new HashSet<>();
+    public static List<Symbol> getWinningSymbols(Symbol symbol) {
+        List<Symbol> winning = new ArrayList<>();
         if (symbol == Symbol.ROCK) {
             winning.add(Symbol.PAPER);
             winning.add(Symbol.SPOCK);
@@ -44,8 +46,8 @@ public enum Symbol {
         return winning;
     }
 
-    public static Set<Symbol> getLosingSymbols(Symbol symbol) {
-        Set<Symbol> losing = new HashSet<>();
+    public static List<Symbol> getLosingSymbols(Symbol symbol) {
+        List<Symbol> losing = new ArrayList<>();
         if (symbol == Symbol.ROCK) {
             losing.add(Symbol.LIZARD);
             losing.add(Symbol.SCISSORS);
