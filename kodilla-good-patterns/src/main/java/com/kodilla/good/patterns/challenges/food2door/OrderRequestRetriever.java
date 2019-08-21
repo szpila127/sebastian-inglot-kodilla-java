@@ -1,15 +1,18 @@
 package com.kodilla.good.patterns.challenges.food2door;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-
 public class OrderRequestRetriever {
 
-    public OrderRequest retrieve() {
+    public OrderRequest retrieve1() {
 
-        Producer producer = new Producer("FoodProducer");
         Product food = new Product("FOOD", 100);
-        OrderNumber orderNumber = new OrderNumber(1);
 
-        return new OrderRequest(producer, food, orderNumber);
+        return new OrderRequest(food);
+    }
+
+    public OrderRequest retrieve2() {
+
+        Product drinks = new Product("DRINKS", 200);
+
+        return new OrderRequest(drinks);
     }
 }
