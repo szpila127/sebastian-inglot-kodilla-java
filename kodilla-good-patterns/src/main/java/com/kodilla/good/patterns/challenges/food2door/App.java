@@ -11,6 +11,8 @@ public class App {
         NewShop healthyShop = new NewShop("HealthyShop");
         healthyShop.process(healthyShop, orderRequest1);
 
+        System.out.println();
+
         NewShop glutenFreeShop = new NewShop("GlutenFreeShop");
         glutenFreeShop.process(glutenFreeShop, orderRequest2);
 
