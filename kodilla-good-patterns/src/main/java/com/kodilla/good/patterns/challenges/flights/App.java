@@ -5,7 +5,8 @@ import java.util.Set;
 public class App {
 
     public static void main(String[] args) {
-        Flight.fillFlights();
+
+        FlightDatabase.createFlights();
         Set<Airport> airportDeparture = Flight.getSetOfAirportDepartures(Airport.GDANSK);
         Set<Airport> airportArrivals = Flight.getSetOfAirportArrivals(Airport.KATOWICE);
 
