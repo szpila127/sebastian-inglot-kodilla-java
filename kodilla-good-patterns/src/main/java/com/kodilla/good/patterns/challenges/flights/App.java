@@ -1,7 +1,5 @@
 package com.kodilla.good.patterns.challenges.flights;
 
-import java.util.Set;
-
 public class App {
 
     public static void main(String[] args) {
