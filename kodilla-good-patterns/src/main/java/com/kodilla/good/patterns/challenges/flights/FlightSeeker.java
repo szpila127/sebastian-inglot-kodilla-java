@@ -1,32 +1,57 @@
 package com.kodilla.good.patterns.challenges.flights;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class FlightSeeker {
 
-    public static void getAirportsConnections(Airport departure, Airport arrival) {
+    public static void getAirportsDepartures2(Airport departure, Airport arrival) {
 
+        Set<Airport> result = getAirportDepartures(departure);
+        List<Airport> listAirport = new ArrayList<>(result);
+
+        if (result.contains(arrival)) {
+            System.out.println(departure + " -> " + arrival);
+        } else {
+            for (int i = 0; i < listAirport.size(); i++) {
+                int finalI = i;
+                Set<Airport> airports = (FlightDatabase.flights.entrySet().stream()
+                        .filter(port -> port.getKey() == listAirport.get(finalI))
+                        .flatMap(flight -> flight.getValue().stream())
+                        .collect(Collectors.toSet()));
+
+                if (!airports.contains(arrival)) {
+                    System.out.println("NO CENNECTIONS!");
+                    return;
+                } else if (airports.contains(arrival)) {
+                    System.out.println(departure + " -> " + listAirport.get(finalI) + " -> " + arrival);
+                }
+            }
+        }
     }
 
-    public static void getAirportArrivals(Airport airport) {
+    public static Set<Airport> getAirportArrivals(Airport airport) {
 
         Set<Airport> result = FlightDatabase.flights.entrySet().stream()
                 .filter(port -> port.getValue().contains(airport))
                 .map(flight -> flight.getKey())
                 .collect(Collectors.toSet());
 
-        System.out.println("Arrivals at " + airport + " from: " + result);
+        System.out.println(result + " -> " + airport);
+        return result;
     }
 
-    public static void getAirportDepartures(Airport airport) {
+    public static Set<Airport> getAirportDepartures(Airport airport) {
 
         Set<Airport> result = FlightDatabase.flights.entrySet().stream()
                 .filter(port -> port.getKey() == airport)
                 .flatMap(flight -> flight.getValue().stream())
                 .collect(Collectors.toSet());
 
-        System.out.println("Departures from: " + airport + " to: " + result);
+        System.out.println(airport + " -> " + result);
+        return result;
 
 //        Set<Airport> result = new HashSet<>();
 //        if (airport == Airport.GDANSK) {

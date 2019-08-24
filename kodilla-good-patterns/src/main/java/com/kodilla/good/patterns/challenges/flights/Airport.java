@@ -5,5 +5,6 @@ public enum Airport {
     WARSAW,
     KRAKOW,
     KATOWICE,
-    WROCLAW
+    WROCLAW,
+    GOTARTOWICE
 }
