@@ -12,10 +12,11 @@ public class FlightDatabase {
     public static Set<Airport> krakow = new HashSet<>();
     public static Set<Airport> katowice = new HashSet<>();
     public static Set<Airport> wroclaw = new HashSet<>();
+    public static Map<Airport, Set<Airport>> flights = new HashMap<>();
 
     public static void createFlights() {
         gdansk.add(Airport.WARSAW);
-        gdansk.add(Airport.KRAKOW);
+        gdansk.add(Airport.KATOWICE);
         gdansk.add(Airport.WROCLAW);
 
         warsaw.add(Airport.GDANSK);
@@ -33,10 +34,10 @@ public class FlightDatabase {
         wroclaw.add(Airport.KRAKOW);
         wroclaw.add(Airport.KATOWICE);
 
-        Flight.flights.put(Airport.GDANSK, gdansk);
-        Flight.flights.put(Airport.WARSAW, warsaw);
-        Flight.flights.put(Airport.KRAKOW, krakow);
-        Flight.flights.put(Airport.KATOWICE, katowice);
-        Flight.flights.put(Airport.WROCLAW, wroclaw);
+        flights.put(Airport.GDANSK, gdansk);
+        flights.put(Airport.WARSAW, warsaw);
+        flights.put(Airport.KRAKOW, krakow);
+        flights.put(Airport.KATOWICE, katowice);
+        flights.put(Airport.WROCLAW, wroclaw);
     }
 }

@@ -1,38 +1,32 @@
 package com.kodilla.good.patterns.challenges.flights;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Flight {
+public class FlightSeeker {
 
-    public static Map<Airport, Set<Airport>> flights = new HashMap<>();
+    public static void getAirportsConnections(Airport departure, Airport arrival) {
 
-    private Airport airport;
-
-    public Flight(Airport airport) {
-        this.airport = airport;
     }
 
-    public Airport getAirport() {
-        return airport;
-    }
+    public static void getAirportArrivals(Airport airport) {
 
-    public static Set<Airport> getSetOfAirportArrivals(Airport airport) {
-        return flights.entrySet().stream()
+        Set<Airport> result = FlightDatabase.flights.entrySet().stream()
                 .filter(port -> port.getValue().contains(airport))
                 .map(flight -> flight.getKey())
                 .collect(Collectors.toSet());
+
+        System.out.println("Arrivals at " + airport + " from: " + result);
     }
 
-    public static Set<Airport> getSetOfAirportDepartures(Airport airport) {
+    public static void getAirportDepartures(Airport airport) {
 
-        return flights.entrySet().stream()
+        Set<Airport> result = FlightDatabase.flights.entrySet().stream()
                 .filter(port -> port.getKey() == airport)
                 .flatMap(flight -> flight.getValue().stream())
                 .collect(Collectors.toSet());
+
+        System.out.println("Departures from: " + airport + " to: " + result);
 
 //        Set<Airport> result = new HashSet<>();
 //        if (airport == Airport.GDANSK) {
