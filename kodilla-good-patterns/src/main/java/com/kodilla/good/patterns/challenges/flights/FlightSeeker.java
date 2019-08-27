@@ -9,16 +9,14 @@ public class FlightSeeker {
 
     public static void getAirportsDepartures2(Airport departure, Airport arrival) {
 
-        Set<Airport> result = getAirportDepartures(departure);
-        List<Airport> listAirport = new ArrayList<>(result);
+        Set<Airport> listAirport = getAirportDepartures(departure);
 
-        if (result.contains(arrival)) {
+        if (listAirport.contains(arrival)) {
             System.out.println(departure + " -> " + arrival);
         } else {
-            for (int i = 0; i < listAirport.size(); i++) {
-                int finalI = i;
+            for (Airport airport : listAirport) {
                 Set<Airport> airports = (FlightDatabase.flights.entrySet().stream()
-                        .filter(port -> port.getKey() == listAirport.get(finalI))
+                        .filter(port -> port.getKey() == airport)
                         .flatMap(flight -> flight.getValue().stream())
                         .collect(Collectors.toSet()));
 
@@ -26,7 +24,7 @@ public class FlightSeeker {
                     System.out.println("NO CENNECTIONS!");
                     return;
                 } else if (airports.contains(arrival)) {
-                    System.out.println(departure + " -> " + listAirport.get(finalI) + " -> " + arrival);
+                    System.out.println(departure + " -> " + airport + " -> " + arrival);
                 }
             }
         }

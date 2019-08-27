@@ -4,7 +4,6 @@ public class OrderRequest {
 
     private Product product;
 
-
     public OrderRequest(Product product) {
         this.product = product;
     }
@@ -12,6 +11,4 @@ public class OrderRequest {
     public Product getProduct() {
         return product;
     }
-
-
 }

@@ -12,10 +12,17 @@ abstract class Shop {
         return name;
     }
 
-    @Override
-    public String toString() {
-        return name;
+    abstract void process(OrderRequest orderRequest);
+
+    public void inform() {
+        System.out.println("Informuje klienta");
     }
 
-    abstract OrderDto process(Shop shop, OrderRequest orderRequest);
+    public void deliver() {
+        System.out.println("Wysyłka");
+    }
+
+    public void sendInvoice() {
+        System.out.println("Wysyłam fakturę");
+    }
 }
