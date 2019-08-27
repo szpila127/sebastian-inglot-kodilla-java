@@ -8,9 +8,8 @@ public class GlutenShop extends Shop {
 
     @Override
     void process(OrderRequest orderRequest) {
-        System.out.println();
-        inform();
-        System.out.println("Wysyłam maila z potw.");
-        deliver();
+        System.out.println("Wysłanie maila z potwierdzeniem złożenia zamówienia.");
+        inform(orderRequest);
+        deliver(orderRequest, 3);
     }
 }

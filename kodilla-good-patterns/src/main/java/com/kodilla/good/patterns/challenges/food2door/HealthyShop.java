@@ -8,7 +8,7 @@ public class HealthyShop extends Shop {
 
     @Override
     void process(OrderRequest orderRequest) {
-        System.out.println();
-
+        inform(orderRequest);
+        deliver(orderRequest, 2);
     }
 }
