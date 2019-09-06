@@ -2,8 +2,8 @@ package com.kodilla.patterns.factory.tasks;
 
 public final class TaskFactory {
 
-    public final TaskInterface makeTask(TaskBase taskBase) {
-        switch (taskBase) {
+    public final TaskInterface makeTask(TaskType taskType) {
+        switch (taskType) {
             case DRIVING_TASK:
                 return new DrivingTask("Drive fast", "Krakow", "AUDI");
             case PAINTING_TASK:
