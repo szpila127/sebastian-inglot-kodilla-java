@@ -10,7 +10,7 @@ public class BigmacTestSuite {
         //Given
         Bigmac bigMac = new Bigmac.BigmacBuilder()
                 .ingredient("Onion")
-                .burgers("3")
+                .burgers(3)
                 .sauce("Spicy")
                 .bun("Thin")
                 .ingredient("Ham")
@@ -18,8 +18,14 @@ public class BigmacTestSuite {
                 .build();
         System.out.println(bigMac);
         //When
+        boolean ifContainsOnion = bigMac.getIngredients().contains("Onion");
+        String whithSauce = bigMac.getSauce();
+        int howManyBurgers = (int) bigMac.getBurgers();
         int howManyIngredients = bigMac.getIngredients().size();
         //Then
+        Assert.assertTrue(ifContainsOnion);
+        Assert.assertEquals(3, howManyBurgers);
+        Assert.assertEquals("Spicy", whithSauce);
         Assert.assertEquals(3, howManyIngredients);
     }
 }
