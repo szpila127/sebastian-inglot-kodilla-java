@@ -33,7 +33,7 @@ public class DbManagerTestSuite {
                     rs.getString("LASTNAME"));
             counter++;
         }
-        rs.close();;
+        rs.close();
         statement.close();
         Assert.assertEquals(5, counter);
     }
@@ -59,7 +59,7 @@ public class DbManagerTestSuite {
         }
         rs.close();
         statement.close();
-        Assert.assertEquals(2, counter);
+        Assert.assertEquals(1, counter);
 
 
     }
