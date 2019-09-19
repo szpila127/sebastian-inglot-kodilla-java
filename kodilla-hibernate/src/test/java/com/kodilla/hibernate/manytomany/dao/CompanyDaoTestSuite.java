@@ -9,11 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
     @Autowired
     CompanyDao companyDao;
+    @Autowired
+    EmployeeDao employeeDao;
 
     @Test
     public void testSaveManyToMany(){
@@ -59,5 +63,57 @@ public class CompanyDaoTestSuite {
 //        } catch (Exception e) {
 //            //do nothing
 //        }
+    }
+
+    @Test
+    public void testFindEmployeeByLastname() {
+        //Given
+        Employee tom = new Employee("Tom", "Riddle");
+        Employee max = new Employee("Max", "Riddick");
+        Employee frank = new Employee("Frank", "Sinatra");
+        Employee seeb = new Employee("Seeb", "Stepowy");
+
+        employeeDao.save(tom);
+        employeeDao.save(max);
+        employeeDao.save(frank);
+        employeeDao.save(seeb);
+
+        //When
+        List<Employee> byLastName = employeeDao.retriveLastname("Riddle");
+
+        //Then
+        Assert.assertEquals(1, byLastName.size());
+
+        //CleanUp
+        employeeDao.delete(tom);
+        employeeDao.delete(max);
+        employeeDao.delete(frank);
+        employeeDao.delete(seeb);
+    }
+
+    @Test
+    public void testFindCompaniesBy3FirstLetters() {
+        //When
+        Company microsoft = new Company("Microsoft");
+        Company kodilla = new Company("Kodilla");
+        Company kodak = new Company("Kodak");
+        Company mixiaomi = new Company("MiXiaomi");
+
+        companyDao.save(microsoft);
+        companyDao.save(kodilla);
+        companyDao.save(kodak);
+        companyDao.save(mixiaomi);
+
+        //When
+        List<Company> findBy3FirstLetters = companyDao.retrieveCompaniesWithFirst3Letters("Kod");
+
+        //Then
+        Assert.assertEquals(2, findBy3FirstLetters.size());
+
+        //CleanUp
+        companyDao.delete(microsoft);
+        companyDao.delete(kodilla);
+        companyDao.delete(kodak);
+        companyDao.delete(mixiaomi);
     }
 }
