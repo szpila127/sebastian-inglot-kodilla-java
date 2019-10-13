@@ -1,55 +1,33 @@
 package com.kodilla.hibernate.invoice;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "PRODUCTS")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Product {
-    private int id;
-    private String name;
-    private List<Item> items = new ArrayList<>();
-
-    public Product() {
-    }
-
-    public Product(String name) {
-        this.name = name;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
-    @Column(name = "ID", unique = true)
-    public int getId() {
-        return id;
-    }
+    private int id;
 
-    private void setId(int id) {
-        this.id = id;
-    }
+    private String name;
 
-    @Column(name = "NAME")
-    public String getName() {
-        return name;
-    }
+    private List<Item> items = new ArrayList<>();
 
-    private void setName(String name) {
-        this.name = name;
-    }
-
-    @OneToMany(
-            targetEntity = Item.class,
-            mappedBy = "product",
-            fetch = FetchType.LAZY
-    )
+    @OneToMany(mappedBy = "product")
     public List<Item> getItems() {
         return items;
     }
 
-    private void setItems(List<Item> items) {
-        this.items = items;
+    public Product(String name) {
+        this.name = name;
     }
 }
