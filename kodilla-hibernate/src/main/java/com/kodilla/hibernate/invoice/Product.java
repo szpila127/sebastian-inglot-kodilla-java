@@ -20,12 +20,8 @@ public class Product {
 
     private String name;
 
-    private List<Item> items = new ArrayList<>();
-
     @OneToMany(mappedBy = "product")
-    public List<Item> getItems() {
-        return items;
-    }
+    private List<Item> items = new ArrayList<>();
 
     public Product(String name) {
         this.name = name;

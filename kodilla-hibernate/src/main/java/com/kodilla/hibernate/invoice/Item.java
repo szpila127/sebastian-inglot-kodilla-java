@@ -16,23 +16,18 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private Product product;
-    private BigDecimal price;
-    private int quantity;
-    private BigDecimal value;
-    private Invoice invoice;
 
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
-    public Product getProduct() {
-        return product;
-    }
+    private Product product;
 
     @ManyToOne
     @JoinColumn(name = "INVOICE_ID")
-    public Invoice getInvoice() {
-        return invoice;
-    }
+    private Invoice invoice;
+
+    private BigDecimal price;
+    private int quantity;
+    private BigDecimal value;
 
     public Item(BigDecimal price, int quantity, BigDecimal value) {
         this.price = price;
