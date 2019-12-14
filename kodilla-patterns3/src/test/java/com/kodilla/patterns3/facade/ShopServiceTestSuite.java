@@ -1,6 +1,5 @@
 package com.kodilla.patterns3.facade;
 
-import com.kodilla.patterns3.facade.ShopService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
