@@ -1,4 +1,4 @@
-package com.kodilla.patterns3.facade;
+package com.kodilla.patterns2.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -103,8 +103,7 @@ public class ShopService {
         while (orderIterator.hasNext()) {
             Order theOrder = orderIterator.next();
             if (theOrder.isVerified()) {
-                theOrder.setSubmitted(true);
-            }
+                theOrder.setSubmitted(true);           }
             return theOrder.isSubmitted();
         }
         return false;

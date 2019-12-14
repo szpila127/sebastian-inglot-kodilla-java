@@ -1,4 +1,4 @@
-package com.kodilla.patterns3.facade;
+package com.kodilla.patterns2.facade;
 
 public class Item {
     private final Long productId;

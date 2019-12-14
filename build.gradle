@@ -27,4 +27,5 @@ dependencies {
     implementation 'junit:junit:4.12'
     implementation 'junit:junit:4.12'
     implementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'junit:junit:4.12'
 }
