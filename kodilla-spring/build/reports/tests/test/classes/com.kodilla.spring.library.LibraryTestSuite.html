@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.kodilla.spring.library.LibraryTestSuite</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.kodilla.spring.library.LibraryTestSuite</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.kodilla.spring.library.html">com.kodilla.spring.library</a> &gt; LibraryTestSuite</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.883s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testContext</td>
+<td class="success">0.328s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testLoadFromDb</td>
+<td class="success">0.291s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSaveToDb</td>
+<td class="success">0.264s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2019-12-15 13:44:38.202  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kodilla.spring.library.LibraryTestSuite], using SpringBootContextLoader
+2019-12-15 13:44:38.203  INFO 10204 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kodilla.spring.library.LibraryTestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-12-15 13:44:38.204  INFO 10204 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kodilla.spring.library.LibraryTestSuite]: LibraryTestSuite does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-12-15 13:44:38.219  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kodilla.spring.SpringRunner for test class com.kodilla.spring.library.LibraryTestSuite
+2019-12-15 13:44:38.222  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-12-15 13:44:38.225  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@529081de, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7b82155c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@34ae3553, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a0b8240, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2cc372ae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4780ba9f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2410b91, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@24fe901b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@131fd028]
+2019-12-15 13:44:38.250  INFO 10204 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5189c496: startup date [Sun Dec 15 13:44:38 CET 2019]; root of context hierarchy
+2019-12-15 13:44:38.489  INFO 10204 --- [    Test worker] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+Saving data to the database.
+2019-12-15 13:44:38.517  INFO 10204 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1dcc94ee: startup date [Sun Dec 15 13:44:38 CET 2019]; root of context hierarchy
+2019-12-15 13:44:38.781  INFO 10204 --- [    Test worker] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+Loading data from the database
+2019-12-15 13:44:38.809  INFO 10204 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4c20b92c: startup date [Sun Dec 15 13:44:38 CET 2019]; root of context hierarchy
+2019-12-15 13:44:39.104  INFO 10204 --- [    Test worker] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+===== Beans list: ==== &gt;&gt;
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalRequiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.context.event.internalEventListenerFactory
+calculator
+display
+forumUser
+libraryConfig
+boardConfig
+readerConfig
+circle
+shapesFactory
+triangle
+springRunner
+library
+libraryDbController
+board
+toDoList
+inProgressList
+doneList
+getReader
+book1
+book2
+createSquare
+chosenShape
+org.springframework.boot.autoconfigure.AutoConfigurationPackages
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+propertySourcesPlaceholderConfigurer
+org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+mbeanExporter
+objectNamingStrategy
+mbeanServer
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration
+spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+server-org.springframework.boot.autoconfigure.web.ServerProperties
+&lt;&lt; ===== Beans list ====
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.4.1</a> at 2019-12-15 13:44:40</p>
+</div>
+</div>
+</body>
+</html>

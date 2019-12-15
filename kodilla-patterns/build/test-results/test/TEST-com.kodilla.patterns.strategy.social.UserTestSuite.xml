@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.strategy.social.UserTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-12-15T12:44:27" hostname="SebastianLaptok" time="0.004">
+  <properties/>
+  <testcase name="testDefaultSharingStrategies" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.003"/>
+  <testcase name="testIndividualSharingStrategy" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.001"/>
+  <system-out><![CDATA[Maciek Millenials uĹĽywa [Facebook]
+Tadek Y. Niejadek uĹĽywa [Snapchat]
+Zenenk Z. BĂłbr uĹĽywa [Twitter]
+Zenenk Z. BĂłbr uĹĽywa [Twitter]
+Zenenk Z. BĂłbr uĹĽywa [Facebook]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
