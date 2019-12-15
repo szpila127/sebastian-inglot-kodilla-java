@@ -19,7 +19,7 @@ public class ShopServiceTestSuite {
         long orderId = shopService.openOrder(1L);
         System.out.println("Registering new order, ID: " + orderId);
         if (orderId > 0) {
-            shopService.addItem(orderId, 10L, 3);
+            shopService.addItem(orderId, 10L, 2);
             System.out.println("Adding item: 10, 2 pcs");
             shopService.addItem(orderId, 216L, 1);
             System.out.println("Adding item: 216, 1 pc");
