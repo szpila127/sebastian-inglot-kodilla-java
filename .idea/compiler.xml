@@ -3,34 +3,15 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.10/625fc0055674dff70dbc76efa36d0f2c89b04a24/lombok-1.18.10.jar" />
+        </processorPath>
+        <module name="kodilla-course.kodilla-hibernate.main" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="kodilla-course.kodilla-exception.main" target="1.8" />
-      <module name="kodilla-course.kodilla-exception.test" target="1.8" />
-      <module name="kodilla-course.kodilla-good-patterns.main" target="1.8" />
-      <module name="kodilla-course.kodilla-good-patterns.test" target="1.8" />
-      <module name="kodilla-course.kodilla-hibernate.main" target="1.8" />
-      <module name="kodilla-course.kodilla-hibernate.test" target="1.8" />
-      <module name="kodilla-course.kodilla-jdbc.main" target="1.8" />
-      <module name="kodilla-course.kodilla-jdbc.test" target="1.8" />
-      <module name="kodilla-course.kodilla-patterns.main" target="1.8" />
-      <module name="kodilla-course.kodilla-patterns.test" target="1.8" />
-      <module name="kodilla-course.kodilla-patterns2.main" target="1.8" />
-      <module name="kodilla-course.kodilla-patterns2.test" target="1.8" />
-      <module name="kodilla-course.kodilla-rps.main" target="1.8" />
-      <module name="kodilla-course.kodilla-rps.test" target="1.8" />
-      <module name="kodilla-course.kodilla-spring-intro.main" target="1.8" />
-      <module name="kodilla-course.kodilla-spring-intro.test" target="1.8" />
-      <module name="kodilla-course.kodilla-spring.main" target="1.8" />
-      <module name="kodilla-course.kodilla-spring.test" target="1.8" />
-      <module name="kodilla-course.kodilla-stream.main" target="1.8" />
-      <module name="kodilla-course.kodilla-stream.test" target="1.8" />
-      <module name="kodilla-course.kodilla-sudoku.main" target="1.8" />
-      <module name="kodilla-course.kodilla-sudoku.test" target="1.8" />
-      <module name="kodilla-course.kodilla-testing.main" target="1.8" />
-      <module name="kodilla-course.kodilla-testing.test" target="1.8" />
-      <module name="kodilla-course.main" target="1.8" />
-      <module name="kodilla-course.test" target="1.8" />
       <module name="kodilla-patterns2.main" target="1.8" />
       <module name="kodilla-patterns2.test" target="1.8" />
     </bytecodeTargetLevel>
