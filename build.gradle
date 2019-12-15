@@ -1,24 +1,4 @@
-plugins {
-    id 'org.springframework.boot' version '2.1.5.RELEASE'
-    id 'java'
-}
-
-apply plugin: 'io.spring.dependency-management'
-
-group = 'com.kodilla'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-
-repositories {
-    mavenCentral()
-}
-
+apply plugin: 'java'
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testCompile('junit:junit:4.12')
-    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
-    implementation 'junit:junit:4.12'
-    implementation 'org.testng:testng:6.9.6'
-    implementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
