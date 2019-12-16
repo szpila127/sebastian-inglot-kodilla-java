@@ -9,6 +9,12 @@ import java.util.List;
         name = "Employee.retriveLastname",
         query = "FROM Employee WHERE lastname = :LASTNAME"
 )
+@NamedNativeQuery(
+        name = "Employee.retrieveEmployeWithAnyLetters",
+        query = "SELECT * FROM EMPLOYEES" +
+                " WHERE FIRSTNAME LIKE CONCAT('%', :ANYLETTERS, '%') OR LASTNAME LIKE CONCAT('%', :ANYLETTERS, '%')",
+        resultClass = Employee.class
+)
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
@@ -69,5 +75,10 @@ public class Employee {
 
     private void setCompanies(List<Company> companies) {
         this.companies = companies;
+    }
+
+    @Override
+    public String toString() {
+        return id + ": [" + firstname + " " + lastname + "]";
     }
 }
