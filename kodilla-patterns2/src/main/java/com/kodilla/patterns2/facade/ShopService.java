@@ -18,7 +18,7 @@ public class ShopService {
     private ProductService productService;
 
     public Long openOrder(Long userId) {
-        if (authenticator.isAuthenticated(userId)) {
+        if (authenticator.isAuthenticated()) {
             Long maxOrder = (long) orders.stream()
                     .mapToInt(o -> o.getOrderId().intValue())
                     .max().orElse(0);
@@ -42,7 +42,7 @@ public class ShopService {
         while (orderIterator.hasNext()) {
             Order theOrder = orderIterator.next();
             int orderSize = theOrder.getItems().size();
-            for (int n = 0; n < theOrder.getItems().size(); n++) {
+            for (int n = 0; n < orderSize; n++) {
                 if (theOrder.getItems().get(n).getProductId().equals(productId)) {
                     theOrder.getItems().remove(n);
                     return true;
