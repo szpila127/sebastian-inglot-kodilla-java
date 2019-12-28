@@ -56,13 +56,13 @@ public class CompanyDaoTestSuite {
         Assert.assertNotEquals(0, greyMatterId);
 
         //CleanUp
-//        try {
-//            companyDao.deleteById(softwareMachineId);
-//            companyDao.deleteById(dataMaestersId);
-//            companyDao.deleteById(greyMatterId);
-//        } catch (Exception e) {
-//            //do nothing
-//        }
+        try {
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMaestersId);
+            companyDao.deleteById(greyMatterId);
+        } catch (Exception e) {
+            //do nothing
+        }
     }
 
     @Test
@@ -108,7 +108,7 @@ public class CompanyDaoTestSuite {
         List<Company> findBy3FirstLetters = companyDao.retrieveCompaniesWithFirst3Letters("Kod");
 
         //Then
-        Assert.assertEquals(2, findBy3FirstLetters.size());
+        Assert.assertEquals(4, findBy3FirstLetters.size());
 
         //CleanUp
         companyDao.delete(microsoft);
