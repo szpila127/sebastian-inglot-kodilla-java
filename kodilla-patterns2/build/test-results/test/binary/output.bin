@@ -1,18 +1,6 @@
-3Michał: New task: Sudoku -> Sebastian Tasks Queue
- (total: 1 tasks)
-3Andrzej: New task: Sudoku -> Sebastian Tasks Queue
- (total: 1 tasks)
-6Michał: New task: TicTacToe -> Sebastian Tasks Queue
- (total: 2 tasks)
-6Andrzej: New task: TicTacToe -> Sebastian Tasks Queue
- (total: 2 tasks)
-7Michał: New task: FrogCatcher -> Angelika Tasks Queue
- (total: 1 tasks)
-5Andrzej: New task: FlightSeeker -> Karol Tasks Queue
- (total: 1 tasks)
-0Michał: Remove Sudoku -> Sebastian Tasks Queue
- (total: 1 tasks)
-0Andrzej: Remove Sudoku -> Sebastian Tasks Queue
- (total: 1 tasks)
-2Andrzej: Remove FlightSeeker -> Karol Tasks Queue
- (total: 0 tasks)
+WEmployee{peselId='67032906720', firstname='John', lastname='Smitch', baseSalary=4500}
+WEmployee{peselId='62081612187', firstname='Ivone', lastname='Novak', baseSalary=3700}
+ZEmployee{peselId='75021310799', firstname='Jessie', lastname='Pinkman', baseSalary=4350}
+XEmployee{peselId='75012200766', firstname='Walter', lastname='White', baseSalary=9000}
+XEmployee{peselId='75073006831', firstname='Clara', lastname='Lanson', baseSalary=6200}
+	27750.0
