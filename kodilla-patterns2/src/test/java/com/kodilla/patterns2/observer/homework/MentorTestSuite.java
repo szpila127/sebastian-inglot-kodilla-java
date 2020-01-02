@@ -24,6 +24,7 @@ public class MentorTestSuite {
         karol.addTask("FlightSeeker");
         sebastian.removeTask();
         karol.removeTask();
+        karol.removeTask();
         //Then
         assertEquals(4, michal.getUpdateCount());
         assertEquals(5, andrzej.getUpdateCount());

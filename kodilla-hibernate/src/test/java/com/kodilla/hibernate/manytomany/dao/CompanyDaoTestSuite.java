@@ -93,7 +93,7 @@ public class CompanyDaoTestSuite {
 
     @Test
     public void testFindCompaniesBy3FirstLetters() {
-        //When
+        //Given
         Company microsoft = new Company("Microsoft");
         Company kodilla = new Company("Kodilla");
         Company kodak = new Company("Kodak");

@@ -21,9 +21,13 @@ public class TaskQueue implements ObservableHW {
     }
 
     public void removeTask() {
-        String task = tasks.get(0);
-        tasks.remove(0);
-        notifyObserverHW("Remove " + task);
+        if (!tasks.isEmpty()) {
+            String task = tasks.get(0);
+            tasks.remove(0);
+            notifyObserverHW("Remove " + task);
+        }  else {
+            System.out.println("Empty list !");
+        }
     }
 
     @Override

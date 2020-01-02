@@ -24,6 +24,22 @@ public class Facade {
         return employeeDao.retrieveEmployeWithAnyLetters(employeeName);
     }
 
+    public void saveEmployee(Employee employee) {
+        employeeDao.save(employee);
+    }
+
+    public void saveCompany(Company company) {
+        companyDao.save(company);
+    }
+
+    public void removeEmployee(Employee employee) {
+        employeeDao.delete(employee);
+    }
+
+    public void removeCompany(Company company) {
+        companyDao.delete(company);
+    }
+
     public CompanyDao getCompanyDao() {
         return companyDao;
     }
