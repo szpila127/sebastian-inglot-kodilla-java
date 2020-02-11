@@ -1,8 +1,8 @@
 package com.kodilla.patterns.builder.checkers;
 
 public final class FigureFactory {
-    public static final String PAWN="PAWN";
-    public static final String QUEEN="QUEEN";
+    public static final String PAWN = "PAWN";
+    public static final String QUEEN = "QUEEN";
 
     public static Figure makeFigure(String figureType, String color) {
         if (figureType.equals(PAWN)) {

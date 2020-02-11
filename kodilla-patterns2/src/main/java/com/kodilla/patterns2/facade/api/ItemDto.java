@@ -20,6 +20,6 @@ public class ItemDto {
     @Override
     public String toString() {
         return "[ID: " + productId +
-                ", QUANTITY: " + quantity +']';
+                ", QUANTITY: " + quantity + ']';
     }
 }

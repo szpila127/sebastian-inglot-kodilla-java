@@ -10,8 +10,8 @@ public final class TaskFactory {
                 return new PaintingTask("Paint today!", "Black", "Volvo");
             case SHOPPING_TASK:
                 return new ShoppingTask("Shopping Time", "Everything", 1000);
-                default:
-                    return null;
+            default:
+                return null;
         }
     }
 }

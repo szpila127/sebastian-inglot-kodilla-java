@@ -16,7 +16,7 @@ public class AspectsWatcher {
 
     @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))" +
             "&& args(order, userId)")
-    public void logEvent(OrderDto order, Long userId ) {
+    public void logEvent(OrderDto order, Long userId) {
         LOGGER.info("UserID: " + userId + " -> create order: " + order.toString());
     }
 

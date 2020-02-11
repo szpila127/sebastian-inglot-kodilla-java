@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.hibernate.manytomany.facade.FacadeTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-02T20:19:19" hostname="DESKTOP-8HL4U4S" time="0.202">
-  <properties/>
-  <testcase name="testGetEmployeesByAnyLetters" classname="com.kodilla.hibernate.manytomany.facade.FacadeTestSuite" time="0.202"/>
-  <system-out><![CDATA[21:19:15.984 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.kodilla.hibernate.manytomany.facade.FacadeTestSuite]
+<testsuite name="com.kodilla.hibernate.manytomany.facade.FacadeTestSuite" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2020-01-02T20:19:19" hostname="DESKTOP-8HL4U4S" time="0.202">
+    <properties/>
+    <testcase name="testGetEmployeesByAnyLetters" classname="com.kodilla.hibernate.manytomany.facade.FacadeTestSuite"
+              time="0.202"/>
+    <system-out><![CDATA[21:19:15.984 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.kodilla.hibernate.manytomany.facade.FacadeTestSuite]
 21:19:15.984 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
 21:19:16.000 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
 21:19:16.022 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.kodilla.hibernate.manytomany.facade.FacadeTestSuite] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
@@ -76,5 +78,5 @@ Hibernate: select employee0_.employee_id as employee1_1_0_, employee0_.firstname
 Hibernate: select companies0_.employee_id as employee1_4_0_, companies0_.company_id as company_2_4_0_, company1_.company_id as company_1_0_1_, company1_.company_name as company_2_0_1_ from join_company_employee companies0_ inner join companies company1_ on companies0_.company_id=company1_.company_id where companies0_.employee_id=?
 Hibernate: delete from employees where employee_id=?
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -57,7 +57,7 @@ public class AdvStatisticsTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> staticticsList = new LinkedList<>();
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             staticticsList.add("Test");
         }
         int postsCount = 1000;
@@ -84,7 +84,7 @@ public class AdvStatisticsTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
         List<String> staticticsList = new LinkedList<>();
-        for(int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             staticticsList.add("Test");
         }
         int postsCount = 500;

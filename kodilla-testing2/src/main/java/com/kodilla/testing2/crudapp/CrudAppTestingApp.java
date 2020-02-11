@@ -22,7 +22,7 @@ public class CrudAppTestingApp {
         WebElement textareaField = driver.findElement(By.xpath(XPATH_TEXTAREA));
         textareaField.sendKeys("The robotic content");
 
-        while (!driver.findElement(By.xpath(XPATH_WAIT_FOR)).isDisplayed());
+        while (!driver.findElement(By.xpath(XPATH_WAIT_FOR)).isDisplayed()) ;
 
         WebElement selectCombo = driver.findElement(By.xpath(XPATH_SELECT));
         Select selectBoard = new Select(selectCombo);

@@ -25,7 +25,7 @@ public class TaskQueue implements ObservableHW {
             String task = tasks.get(0);
             tasks.remove(0);
             notifyObserverHW("Remove " + task);
-        }  else {
+        } else {
             System.out.println("Empty list !");
         }
     }

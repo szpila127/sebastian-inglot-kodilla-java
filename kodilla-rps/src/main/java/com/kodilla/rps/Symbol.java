@@ -31,7 +31,7 @@ public enum Symbol {
         } else if (symbol == Symbol.PAPER) {
             winning.add(Symbol.SCISSORS);
             winning.add(Symbol.LIZARD);
-        } else if (symbol== Symbol.SCISSORS) {
+        } else if (symbol == Symbol.SCISSORS) {
             winning.add(Symbol.ROCK);
             winning.add(Symbol.SPOCK);
         } else if (symbol == Symbol.SPOCK) {

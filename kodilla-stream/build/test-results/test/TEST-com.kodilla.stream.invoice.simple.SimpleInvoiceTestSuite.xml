@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.invoice.simple.SimpleInvoiceTestSuite" tests="1" skipped="1" failures="0" errors="0" timestamp="2020-01-19T17:42:20" hostname="DESKTOP-8HL4U4S" time="1756.712">
-  <properties/>
-  <testcase name="testGetValueToPay" classname="com.kodilla.stream.invoice.simple.SimpleInvoiceTestSuite" time="1756.712">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+<testsuite name="com.kodilla.stream.invoice.simple.SimpleInvoiceTestSuite" tests="1" skipped="1" failures="0" errors="0"
+           timestamp="2020-01-19T17:42:20" hostname="DESKTOP-8HL4U4S" time="1756.712">
+    <properties/>
+    <testcase name="testGetValueToPay" classname="com.kodilla.stream.invoice.simple.SimpleInvoiceTestSuite"
+              time="1756.712">
+        <skipped/>
+    </testcase>
+    <system-out><![CDATA[]]></system-out>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

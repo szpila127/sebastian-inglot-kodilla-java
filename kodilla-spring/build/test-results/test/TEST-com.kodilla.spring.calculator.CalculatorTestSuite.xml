@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.spring.calculator.CalculatorTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-15T12:44:37" hostname="SebastianLaptok" time="0.691">
-  <properties/>
-  <testcase name="testCalculations" classname="com.kodilla.spring.calculator.CalculatorTestSuite" time="0.691"/>
-  <system-out><![CDATA[13:44:35.131 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.kodilla.spring.calculator.CalculatorTestSuite]
+<testsuite name="com.kodilla.spring.calculator.CalculatorTestSuite" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2019-12-15T12:44:37" hostname="SebastianLaptok" time="0.691">
+    <properties/>
+    <testcase name="testCalculations" classname="com.kodilla.spring.calculator.CalculatorTestSuite" time="0.691"/>
+    <system-out><![CDATA[13:44:35.131 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.kodilla.spring.calculator.CalculatorTestSuite]
 13:44:35.151 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
 13:44:35.166 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
 13:44:35.200 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.kodilla.spring.calculator.CalculatorTestSuite] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
@@ -70,5 +71,5 @@
 6.0
 9.0
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

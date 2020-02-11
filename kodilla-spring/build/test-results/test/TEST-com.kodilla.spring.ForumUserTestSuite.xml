@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.spring.ForumUserTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-15T12:44:37" hostname="SebastianLaptok" time="0.402">
-  <properties/>
-  <testcase name="testGetUsername" classname="com.kodilla.spring.ForumUserTestSuite" time="0.402"/>
-  <system-out><![CDATA[2019-12-15 13:44:37.773  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kodilla.spring.ForumUserTestSuite], using SpringBootContextLoader
+<testsuite name="com.kodilla.spring.ForumUserTestSuite" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2019-12-15T12:44:37" hostname="SebastianLaptok" time="0.402">
+    <properties/>
+    <testcase name="testGetUsername" classname="com.kodilla.spring.ForumUserTestSuite" time="0.402"/>
+    <system-out><![CDATA[2019-12-15 13:44:37.773  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kodilla.spring.ForumUserTestSuite], using SpringBootContextLoader
 2019-12-15 13:44:37.774  INFO 10204 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kodilla.spring.ForumUserTestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
 2019-12-15 13:44:37.775  INFO 10204 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kodilla.spring.ForumUserTestSuite]: ForumUserTestSuite does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
 2019-12-15 13:44:37.787  INFO 10204 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kodilla.spring.SpringRunner for test class com.kodilla.spring.ForumUserTestSuite
@@ -11,5 +12,5 @@
 2019-12-15 13:44:37.826  INFO 10204 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@38abb7ac: startup date [Sun Dec 15 13:44:37 CET 2019]; root of context hierarchy
 2019-12-15 13:44:38.196  INFO 10204 --- [    Test worker] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

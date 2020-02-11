@@ -8,7 +8,7 @@ public class Statistics implements BookStatistics {
     public int averagePublicationYear(Map<BookSignature, BookB> books) {
         if (books.size() == 0) return 0;
         int sum = 0;
-        for(Map.Entry<BookSignature, BookB> entry : books.entrySet()) {
+        for (Map.Entry<BookSignature, BookB> entry : books.entrySet()) {
             sum += entry.getValue().getYearOfPublication();
         }
         return sum / books.size();
@@ -16,7 +16,7 @@ public class Statistics implements BookStatistics {
 
     @Override
     public int medianPublicastionYear(Map<BookSignature, BookB> books) {
-        if (books.size() == 0 ) return 0;
+        if (books.size() == 0) return 0;
         int[] years = new int[books.size()];
         int n = 0;
         for (Map.Entry<BookSignature, BookB> entry : books.entrySet()) {

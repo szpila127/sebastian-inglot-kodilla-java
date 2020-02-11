@@ -16,6 +16,6 @@ public class MedianAdapter extends MedianAdaptee implements Classifier {
         for (BookA book : bookSet) {
             books.put(new BookSignature(book.getSignature()), new BookB(book.getAuthor(), book.getTitle(), book.getPublicationYear()));
         }
-            return medianPublicastionYear(books);
+        return medianPublicastionYear(books);
     }
 }

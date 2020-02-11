@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class IfDayIsOddCondition implements Condition {
 
     @Override
-    public  boolean matches( ConditionContext conditionContext, AnnotatedTypeMetadata metadata) {
+    public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata metadata) {
         return LocalDate.now().getDayOfMonth() % 2 != 0;
     }
 }

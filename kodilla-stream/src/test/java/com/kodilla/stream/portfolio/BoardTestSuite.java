@@ -189,5 +189,5 @@ public class BoardTestSuite {
 
         //Then
         Assert.assertEquals(10, averageDays, 0.01);
-}
+    }
 }

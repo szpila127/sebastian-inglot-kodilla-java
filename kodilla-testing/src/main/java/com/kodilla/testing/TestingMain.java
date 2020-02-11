@@ -6,7 +6,7 @@ import com.kodilla.testing.collection.OddNumbersExterminator;
 
 public class TestingMain {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator(5,2);
+        Calculator calculator = new Calculator(5, 2);
 
         int add = calculator.add();
         int substract = calculator.substract();
@@ -17,7 +17,7 @@ public class TestingMain {
             System.out.println("Addiction Error!");
         }
 
-        if(substract == 5 - 2) {
+        if (substract == 5 - 2) {
             System.out.println("Substraction OK");
         } else {
             System.out.println("Substraction Error!");
