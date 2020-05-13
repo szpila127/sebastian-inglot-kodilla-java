@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing2.crudapp.CrudAppTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-25T19:46:45" hostname="DESKTOP-8HL4U4S" time="8.691">
+  <properties/>
+  <testcase name="shouldCreateTrelloCard" classname="com.kodilla.testing2.crudapp.CrudAppTestSuite" time="8.691"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 8306
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1582660009.792][WARNING]: Timed out connecting to Chrome, retrying...
+lut 25, 2020 8:46:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

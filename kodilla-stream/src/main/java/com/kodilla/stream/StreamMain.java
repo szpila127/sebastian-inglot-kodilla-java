@@ -44,7 +44,6 @@ public class StreamMain {
         System.out.println();
 
         BookDirectory theBookDirectory2 = new BookDirectory();
-
         Map<String, Book> theResultMapOfBooks = theBookDirectory2.getList().stream()
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .collect(Collectors.toMap(Book::getSignature, book -> book));
