@@ -19,11 +19,10 @@ public class FlightSeeker {
             if (entry.getKey().equals(flight.getArrivalAirport())) {
                 if (entry.getValue()) {
                     System.out.println("Flight possible.");
-                    return;
                 } else {
                     System.out.println("Flight impossible, find another airport.");
-                    return;
                 }
+                return;
             }
         }
         throw new RouteNotFoundException("Airport does not exist");
